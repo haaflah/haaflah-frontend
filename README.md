@@ -27,7 +27,7 @@ Core features include:
 - 🎫 **Smart Event Creation & Dashboard** – Tools for organizers to create, publish, and manage events.
 - 👤 **Face-ID Registration & Venue Check-in** – Seamless and secure attendee experience.
 - 📊 **Unified Data Collection** – Aggregate and search participant data across multiple registration sources.
-- 📡 **Multi-Platform Livestreaming** – Broadcast events to global audiences with ease.
+- 📡 **Multi-Platform Livestreaming** – Broadcast events to global audiences with ease .
 
 ---
 
