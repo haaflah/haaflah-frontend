@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SigninPage.css";
 import Logo from "../components/Logo/Logo";
+import { Link } from "react-router-dom";
 
 const SigninPage: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -43,8 +44,9 @@ const SigninPage: React.FC = () => {
           <div className="forgot-password">
             <a href="#">Forgot Password?</a>
           </div>
-
-          <button type="submit">Sign In</button>
+          <Link to="/dashboard">
+            <button type="submit" >Sign In</button>
+          </Link>
           <p className="footer">© 2025 ALL RIGHTS RESERVED</p>
         </form>
       </div>
