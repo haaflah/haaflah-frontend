@@ -1,14 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import SigninPage from "./pages/SignInPage";
 import Dashboard from "./pages/Dashboard";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
     <Routes>
-      <Route element={<SigninPage />} path="/" >
-        <Route index element={<SigninPage />} path="sign-in" />
-      </Route>
-      <Route index element={<Dashboard />} path="/dashboard" />
+      <Route path="/" element={<LandingPage />} />
+      {/* Sign-in page */}
+      <Route path="/sign-in" element={<SigninPage />} />
+      {/* Dashboard page */}
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
