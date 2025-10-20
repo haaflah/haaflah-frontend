@@ -1,9 +1,10 @@
 import './App.css'
+import CreateEvent from './pages/CreateEvent'
 
 function App() {
   return (
-    <div className='text-red-500'>
-      Haaflah _Event Management Platform
+    <div className="min-h-screen bg-gray-50 p-6">
+      <CreateEvent />
     </div>
   )
 }
