@@ -27,7 +27,7 @@ Core features include:
 - 🎫 **Smart Event Creation & Dashboard** – Tools for organizers to create, publish, and manage events.
 - 👤 **Face-ID Registration & Venue Check-in** – Seamless and secure attendee experience.
 - 📊 **Unified Data Collection** – Aggregate and search participant data across multiple registration sources.
-- 📡 **Multi-Platform Livestreaming** – Broadcast events to global audiences with ease.
+- 📡 **Multi-Platform Livestreaming** – Broadcast events to global audiences with ease .
 
 ---
 
@@ -50,6 +50,22 @@ Core features include:
    - Attend our online info sessions and live coding events.
 
 ---
+## Project Structure
+
+```markdown
+src\
+ |--assets\             # All media assets, including icons, images, and SVGs
+ |--components\         # Reusable components that can be used across different pages
+ |--auth\               # Authentication-related pages (login, signup, etc.)
+ |--hooks\              # Custom hooks used throughout the application
+ |--pages\              # All pages for the application
+ |--routes\             # All routing logic for navigating through the app
+ |--types\              # TypeScript types and interfaces for the application
+ |--utils\              # Utility functions used throughout the app
+main.tsx                # App entry point
+package.json            # List of all installed dependencies and technologies used
+```
+
 
 ## 🏆 Leaderboard & Recognition
 

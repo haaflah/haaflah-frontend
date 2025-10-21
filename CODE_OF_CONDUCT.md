@@ -6,7 +6,7 @@ We welcome everyone — regardless of your status
 
 This Code of Conduct defines how we expect all participants to behave and how we will respond to unacceptable behavior.
 
-By contributing or participating in this project, you help us make the community **safe, collaborative, and fun for everyon e**.
+By contributing or participating in this project, you help us make the community **safe, collaborative, and fun for everyone**.
 
 ---
 
