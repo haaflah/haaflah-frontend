@@ -53,8 +53,7 @@ function App() {
           </PrivateRoute>
         }
       />
-    </Routes>
-    <Route
+      <Route
         path="/dashboard/create-event"
         element={
           <PrivateRoute>
