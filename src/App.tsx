@@ -1,7 +1,9 @@
 import { Route, Routes, Navigate } from "react-router-dom";
+import './App.css'
 import SigninPage from "./pages/SignInPage";
 import SignupPage from "./pages/SignUpPage";
 import Dashboard from "./pages/Dashboard";
+import CreateEvent from './pages/CreateEvent'
 import LandingPage from "./pages/LandingPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
@@ -48,6 +50,15 @@ function App() {
         element={
           <PrivateRoute>
             <RegistrationPage />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
+    <Route
+        path="/dashboard/create-event"
+        element={
+          <PrivateRoute>
+            <CreateEvent />
           </PrivateRoute>
         }
       />
