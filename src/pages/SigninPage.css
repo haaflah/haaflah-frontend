@@ -92,6 +92,40 @@ html {
   background-color: #0f1b23;
 }
 
+.login-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-form .flex {
+  display: flex;
+}
+
+.login-form .items-center {
+  align-items: center;
+}
+
+.login-form .justify-center {
+  justify-content: center;
+}
+
+.login-form .gap-2 {
+  gap: 0.5rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.login-form .animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.login-form .size-4 {
+  width: 1rem;
+  height: 1rem;
+}
+
 .login-form .footer {
   text-align: center;
   font-size: 10px;
