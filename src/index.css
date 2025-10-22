@@ -7,12 +7,20 @@
 html{
     scroll-behavior: smooth;
 }
+
 .bg-split {
   background: linear-gradient(to bottom, #f3f4f6 70%, white 20%);
 }
+
 .Product-background{
   background: url(./assets/Product-background.png) no-repeat top left;
 }
+
 .FooterImage{
   background: url(./assets/Footer-image.png) no-repeat center;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
