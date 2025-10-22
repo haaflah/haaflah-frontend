@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        {!['/', '/sign-in', '/sign-up', '/forgot-password'].includes(window.location.pathname) && <BreadcrumbNav />}
+        {!['/', '/sign-in', '/sign-up', '/forgot-password', '/reset-password'].includes(window.location.pathname) && <BreadcrumbNav />}
         <App />
       </AuthProvider>
     </BrowserRouter>

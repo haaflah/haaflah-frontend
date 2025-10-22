@@ -1,28 +1,66 @@
+import { Route, Routes, Navigate } from "react-router-dom";
 import './App.css'
-import CreateEvent from './pages/CreateEvent'
-
-function App() {
-  return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <CreateEvent />
-    </div>
-  )
-import { Route, Routes } from "react-router-dom";
 import SigninPage from "./pages/SignInPage";
+import SignupPage from "./pages/SignUpPage";
 import Dashboard from "./pages/Dashboard";
+import CreateEvent from './pages/CreateEvent'
 import LandingPage from "./pages/LandingPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
+import { useAuth } from "./hooks/useAuth";
 
+
+function PrivateRoute({ children }: { children: React.ReactNode }) {
+  const { user, isLoading } = useAuth();
+  
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div className="text-center">
+          <div className="w-16 h-16 mx-auto mb-4 border-4 border-blue-600 rounded-full border-t-transparent animate-spin"></div>
+          <p className="font-medium text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+  
+  return user ? <>{children}</> : <Navigate to="/sign-in" />;
+}
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      {/* Sign-in page */}
       <Route path="/sign-in" element={<SigninPage />} />
-      {/* Dashboard page */}
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/dashboard/registration-demo" element={<RegistrationPage/>} />
+      <Route path="/sign-up" element={<SignupPage />} />
+      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
+      
+      <Route
+        path="/dashboard"
+        element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/dashboard/registration-demo"
+        element={
+          <PrivateRoute>
+            <RegistrationPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/dashboard/create-event"
+        element={
+          <PrivateRoute>
+            <CreateEvent />
+          </PrivateRoute>
+        }
+      />
     </Routes>
   );
 }
