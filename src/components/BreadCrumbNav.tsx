@@ -6,7 +6,6 @@ export default function BreadcrumbNav() {
   const pathname = location.pathname;
   const parts = pathname.split("/").filter(Boolean);
 
-  // Capitalize each word and replace hyphens with spaces
   const formatName = (segment: string): string =>
     segment
       .split("-")
@@ -19,18 +18,18 @@ export default function BreadcrumbNav() {
   }));
 
   return (
-    <nav className="breadcrumb-nav">
-      <Link to="/" className="breadcrumb-home">
+    <nav className="flex items-center bg-white gap-1 text-sm px-8 py-2 border-b border-gray-200 text-gray-500">
+      <Link to="/" className="flex items-center gap-1 font-medium text-gray-500 hover:text-gray-700 no-underline">
         Haaflah
       </Link>
 
       {crumbs.map((crumb, i) => (
         <React.Fragment key={crumb.path}>
-          <span className="breadcrumb-separator">›</span>
+          <span className="text-gray-400 mx-1">›</span>
           {i === crumbs.length - 1 ? (
-            <span className="breadcrumb-current">{crumb.name}</span>
+            <span className="text-gray-900 font-semibold">{crumb.name}</span>
           ) : (
-            <Link to={crumb.path} className="breadcrumb-link">
+            <Link to={crumb.path} className="text-gray-500 hover:text-gray-700 hover:underline no-underline">
               {crumb.name}
             </Link>
           )}
