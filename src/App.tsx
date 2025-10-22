@@ -1,3 +1,12 @@
+import './App.css'
+import CreateEvent from './pages/CreateEvent'
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-50 p-6">
+      <CreateEvent />
+    </div>
+  )
 import { Route, Routes } from "react-router-dom";
 import SigninPage from "./pages/SignInPage";
 import Dashboard from "./pages/Dashboard";
